@@ -1,0 +1,104 @@
+/* CSS */
+.button-16 {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 24px;
+    min-width: 32px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: pre;
+    font-family: Verdana, sans-serif;
+}
+
+.button-16:hover {
+    border-color: #dadce0;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+    color: #202124;
+}
+
+.button-16:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
+body {
+    background-color: #252422;
+}
+
+.flex {
+    display: flex;
+    margin: auto;
+    min-width: 350px;
+    max-width: 450px;
+    height: auto;
+    flex-direction: column;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: #333333;
+}
+
+.table {
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.status {
+    border-radius: 30%;
+    width: 18px;
+    height: 18px;
+    background-color: #08d202;
+    border: #000000 solid 2px;
+    margin-left: 8px;
+}
+
+.boss-title {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: Verdana, serif;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.boss-row {
+    border: #FFFFFF solid 1px;
+    height: 32px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+input, input::placeholder {
+    color: #FFFFFF;
+}
+
+input[type="text"] {
+    margin-left: 8px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+    display: none;
+}
+
+
+main {
+    -webkit-box-shadow: 5px 5px 34px -5px rgba(0, 0, 0, 0.69);
+    box-shadow: 5px 5px 34px -5px rgba(0, 0, 0, 0.69);
+}

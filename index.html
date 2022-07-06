@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Era - Boss Timer</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="flex">
+        <img class="logo" src="./src/logo.png" alt="Logo">
+    </header>
+    <main class="flex card">
+        <div class="card">
+            <table class="table">
+                <tr>
+                    <th colspan="4">
+                        <h1 class="boss-title">BOSS - VERDE</h1>
+                    </th>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_1_verde"></div>
+                    </td>
+                    <td>
+                        <label for="boss1"></label>
+                        <input type="text" name="boss" id="boss1" placeholder="Boss 1" tag="boss_1_verde">
+                    </td>
+                    <td>
+                        <label for="time1"></label>
+                        <input type="time" name="time" id="time1" pattern="HH:mm" tag="boss_1_verde">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_1_verde', 'GREEN')">MORREU</button>
+                    </td>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_2_verde"></div>
+                    </td>
+                    <td>
+                        <label for="boss2"></label>
+                        <input type="text" name="boss" id="boss2" placeholder="Boss 2" tag="boss_2_verde">
+                    </td>
+                    <td>
+                        <label for="time2"></label>
+                        <input type="time" name="time" id="time2" pattern="HH:mm" tag="boss_2_verde">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_2_verde', 'GREEN')">MORREU</button>
+                    </td>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_3_verde"></div>
+                    </td>
+                    <td>
+                        <label for="boss3"></label>
+                        <input type="text" name="boss" id="boss3" placeholder="Boss 3" tag="boss_3_verde">
+                    </td>
+                    <td>
+                        <label for="time3"></label>
+                        <input type="time" name="time" id="time3" pattern="HH:mm" tag="boss_3_verde">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_3_verde', 'GREEN')">MORREU</button>
+                    </td>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_4_verde"></div>
+                    </td>
+                    <td>
+                        <label for="boss4"></label>
+                        <input type="text" name="boss" id="boss4" placeholder="Boss 4" tag="boss_4_verde">
+                    </td>
+                    <td>
+                        <label for="time4"></label>
+                        <input type="time" name="time" id="time4" pattern="HH:mm" tag="boss_4_verde">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_4_verde', 'GREEN')">MORREU</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">&nbsp;</td>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <h1 class="boss-title">BOSS - AMARELO</h1>
+                    </th>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_1_amarelo"></div>
+                    </td>
+                    <td>
+                        <label for="boss5"></label>
+                        <input type="text" name="boss" id="boss5" placeholder="Boss 1" tag="boss_1_amarelo">
+                    </td>
+                    <td>
+                        <label for="time5"></label>
+                        <input type="time" name="time" id="time5" pattern="HH:mm" tag="boss_1_amarelo">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_1_amarelo', 'YELLOW')">MORREU</button>
+                    </td>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_2_amarelo"></div>
+                    </td>
+                    <td>
+                        <label for="boss6"></label>
+                        <input type="text" name="boss" id="boss6" placeholder="Boss 2" tag="boss_2_amarelo">
+                    </td>
+                    <td>
+                        <label for="time6"></label>
+                        <input type="time" name="time" id="time6" pattern="HH:mm" tag="boss_2_amarelo">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_2_amarelo', 'YELLOW')">MORREU</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
