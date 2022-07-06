@@ -21,6 +21,8 @@ const requestPermission = () => {
 
 document.addEventListener("DOMContentLoaded", evt => {
 
+    requestPermission();
+
     let times = document.querySelectorAll('input[type="time"]');
 
     times.forEach(el =>{
