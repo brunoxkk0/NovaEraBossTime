@@ -20,7 +20,6 @@ const requestPermission = () => {
 }
 
 document.addEventListener("DOMContentLoaded", evt => {
-
     requestPermission();
 
     let times = document.querySelectorAll('input[type="time"]');
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", evt => {
     times.forEach(el =>{
 
         let horaAgora = new Date();
-        el.value = `${horaAgora.getHours()}:${horaAgora.getMinutes()}`
+        el.value = `${horaAgora.getHours().toString().padStart(2,'0')}:${horaAgora.getMinutes().toString().padStart(2,'0')}`
 
     })
 
@@ -41,13 +40,13 @@ document.addEventListener("DOMContentLoaded", evt => {
 
             if(!boss){
 
-                el.value = `${horaAgora.getHours()}:${horaAgora.getMinutes()}`
+                el.value = `${horaAgora.getHours().toString().padStart(2,'0')}:${horaAgora.getMinutes().toString().padStart(2,'0')}`
 
             }else{
 
                 let horaFinal = new Date(boss.resetTime)
 
-                el.value = `${horaFinal.getHours()}:${horaFinal.getMinutes()}`
+                el.value = `${horaFinal.getHours().toString().padStart(2,'0')}:${horaFinal.getMinutes().toString().padStart(2,'0')}`
 
                 updateStatus(el.getAttribute("tag"))
 
