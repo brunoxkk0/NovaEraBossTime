@@ -65,8 +65,6 @@ document.addEventListener("DOMContentLoaded", evt => {
 
 const onBossDeath = (boss, type) => {
 
-    console.log("MALANDRA")
-
     BOSSES[boss] = {
         resetTime: (new Date().getTime() + ((type === 'YELLOW' ? 59 : 29) * 60 * 1000)),
         alive: false
