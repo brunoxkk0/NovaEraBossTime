@@ -10,10 +10,14 @@
 <body>
     <header class="flex">
         <img class="logo" src="./src/logo.png" alt="Logo">
+        <nav class="mode-menu">
+            <div class="mode-button" id="BOSSES_BUTTON" onclick="updateTab('BOSS')">PICO</div>
+            <div class="mode-button" id="TOWER_BUTTON" onclick="updateTab('TOWER')">TORRE</div>
+        </nav>
     </header>
     <main class="flex card">
         <div class="card">
-            <table class="table">
+            <table class="table" id="BOSS_CONTENT">
                 <tr>
                     <th colspan="4">
                         <h1 class="boss-title">BOSS - VERDE</h1>
@@ -121,6 +125,80 @@
                     </td>
                     <td>
                         <button class="button-16" onclick="onBossDeath('boss_2_amarelo', 'YELLOW')">MORREU</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">&nbsp;</td>
+                </tr>
+            </table>
+            <table class="table" id="TOWER_CONTENT">
+                <tr>
+                    <th colspan="4">
+                        <h1 class="boss-title">TORRE</h1>
+                    </th>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_1_torre"></div>
+                    </td>
+                    <td>
+                        <label for="boss7"></label>
+                        <input type="text" name="boss" id="boss7" placeholder="1" tag="boss_1_torre">
+                    </td>
+                    <td>
+                        <label for="time7"></label>
+                        <input type="time" name="time" id="time7" pattern="HH:mm" tag="boss_1_torre">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_1_torre', 'TOWER')">MORREU</button>
+                    </td>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_2_torre"></div>
+                    </td>
+                    <td>
+                        <label for="boss8"></label>
+                        <input type="text" name="boss" id="boss8" placeholder="2" tag="boss_2_torre">
+                    </td>
+                    <td>
+                        <label for="time8"></label>
+                        <input type="time" name="time" id="time8" pattern="HH:mm" tag="boss_2_torre">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_2_torre', 'TOWER')">MORREU</button>
+                    </td>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_3_torre"></div>
+                    </td>
+                    <td>
+                        <label for="boss9"></label>
+                        <input type="text" name="boss" id="boss9" placeholder="3" tag="boss_3_torre">
+                    </td>
+                    <td>
+                        <label for="time9"></label>
+                        <input type="time" name="time" id="time9" pattern="HH:mm" tag="boss_3_torre">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_3_torre', 'TOWER')">MORREU</button>
+                    </td>
+                </tr>
+                <tr class="boss-row">
+                    <td>
+                        <div class="status" id="boss_4_torre"></div>
+                    </td>
+                    <td>
+                        <label for="boss10"></label>
+                        <input type="text" name="boss" id="boss10" placeholder="4" tag="boss_4_torre">
+                    </td>
+                    <td>
+                        <label for="time10"></label>
+                        <input type="time" name="time" id="time10" pattern="HH:mm" tag="boss_4_torre">
+                    </td>
+                    <td>
+                        <button class="button-16" onclick="onBossDeath('boss_4_torre', 'TOWER')">MORREU</button>
                     </td>
                 </tr>
                 <tr>

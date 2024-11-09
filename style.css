@@ -42,7 +42,7 @@ body {
 }
 
 .card {
-    border-radius: 15px;
+    border-radius: 0px 15px 15px 15px;
     background-color: #333333;
 }
 
@@ -101,4 +101,34 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 main {
     -webkit-box-shadow: 5px 5px 34px -5px rgba(0, 0, 0, 0.69);
     box-shadow: 5px 5px 34px -5px rgba(0, 0, 0, 0.69);
+}
+
+.mode-menu{
+    display: flex;
+    flex-direction: row;
+}
+
+.mode-button{
+    padding: .7rem 1.7rem;
+    color: #FFF;
+    background-color: #20212499;
+    font-family: Verdana, serif;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    border: #333333 solid 2px;
+    border-bottom-width: 0;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+.mode-button[currentMode]{
+    background-color: #08d20299;
+}
+
+.mode-button[currentMode]:hover{
+    background-color: #08d202AA;
+}
+
+.mode-button:not([currentMode]):hover{
+    background-color: #08d20233;
 }

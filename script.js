@@ -1,5 +1,6 @@
 const BOSSES = [];
 let interval;
+let CURRENT_MODE = "BOSS";
 
 const requestPermission = () => {
 
@@ -20,6 +21,7 @@ const requestPermission = () => {
 }
 
 document.addEventListener("DOMContentLoaded", evt => {
+
     requestPermission();
 
     let times = document.querySelectorAll('input[type="time"]');
@@ -61,12 +63,13 @@ document.addEventListener("DOMContentLoaded", evt => {
         })
     }, 500)
 
+    updateTabState()
 })
 
 const onBossDeath = (boss, type) => {
 
     BOSSES[boss] = {
-        resetTime: (new Date().getTime() + ((type === 'YELLOW' ? 59 : 29) * 60 * 1000)),
+        resetTime: (new Date().getTime() + (type === 'TOWER' ? ((5) * 1000) : ((type === 'YELLOW' ? 59 : 29) * 60 * 1000))),
         alive: false
     }
 
@@ -102,4 +105,39 @@ const updateStatus = (boss) => {
         status.style.backgroundColor = "#08d202"
     }
 
+}
+
+const updateTabState = () => {
+
+    if(CURRENT_MODE === "BOSS"){
+        document.querySelector("#BOSSES_BUTTON").toggleAttribute("currentMode")
+        document.querySelector("#TOWER_BUTTON").removeAttribute("currentMode")
+    }else{
+        document.querySelector("#TOWER_BUTTON").toggleAttribute("currentMode")
+        document.querySelector("#BOSSES_BUTTON").removeAttribute("currentMode")
+    }
+
+
+    switch(CURRENT_MODE){
+        case "BOSS":{
+            document.querySelector("#BOSS_CONTENT").style.display = "table"
+            document.querySelector("#TOWER_CONTENT").style.display = "none"
+            break;
+        }
+        case "TOWER":{
+            document.querySelector("#TOWER_CONTENT").style.display = "table"
+            document.querySelector("#BOSS_CONTENT").style.display = "none"
+            break;
+        }
+    }
+
+}
+
+const updateTab = (tab) => {
+
+    if(CURRENT_MODE === tab)
+        return;
+
+    CURRENT_MODE = tab;
+    updateTabState();
 }
