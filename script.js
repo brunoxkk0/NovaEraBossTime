@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", evt => {
 const onBossDeath = (boss, type) => {
 
     BOSSES[boss] = {
-        resetTime: (new Date().getTime() + (type === 'TOWER' ? ((5) * 1000) : ((type === 'YELLOW' ? 59 : 29) * 60 * 1000))),
+        resetTime: (new Date().getTime() + (type === 'TOWER' ? ((19 * 60 + 50) * 1000) : ((type === 'YELLOW' ? 59 : 29) * 60 * 1000))),
         alive: false
     }
 
